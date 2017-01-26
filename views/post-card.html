@@ -1,0 +1,17 @@
+<div class="myCard">
+	{{cardHeading}}
+	<a ng-href="#/blog/{{blog.blogId}}" >
+	    <h2 class="post-title">
+
+	        {{blog.heading }}
+	   
+	    </h2>
+	    <h3 class="post-subtitle">
+	         {{blog.subHeading}}
+	    </h3>
+	</a>
+	 <p class="hidden">{{blog.bodyHtml}}</p> 
+	<div ng-if='blog.author!=""' class="post-meta">Posted by <a href="#">{{blog.author}}</a> on {{blog.created | date:'medium'}}</div><br/>
+	<a ng-click="myBlog.deleteBlog(blog.blogId,$index)">Delete this blog</a>
+
+</div>
